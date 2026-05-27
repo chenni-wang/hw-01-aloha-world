@@ -7,39 +7,43 @@ The following report contains questions you need to answer as part of your submi
 Please link your UML design file here. See resources in the assignment on how to
 link an image in markdown. You may also use [mermaid] class diagrams if you prefer, if so, include the mermaid code here.  You DO NOT have to include Greeting.java as part of the diagram, just the AlohaWorld application that includes: [AlohaWorld.java], [Greeter.java], and [ConsoleView.java].
 
+![aloha class UML](aloha%20class%20UML.png)
 
 
 ### Program Flow
 Write a short paragraph detailing the flow of the program in your own words. This is to help you understand / trace the code (and give you practice of something called a code walk that will be required in this course).
-
+The program starts with AlohaWorld.java. The main() calls consoleView, asking users to input their names and select the locality number. Then, the main() creates a new greeter object called greeter. Greeter invokes the greet method to return a greeting based on locality. This is further displayed in the console. After one greeting is finished, a while loop is created to ask the users whether they want to run the greeting program again.
 
 ## Assignment Questions
 
 1. List three additional java syntax items you didn't know when reading the code.  (make sure to use * for the list items, see example below, the backtick marks are used to write code inline with markdown)
    
-   * (example) `final class`
+   * 1 Scanner(System.in)
+   * 2 List.copyOf(localityList)
+   * 3 SCANNER.nextLine().toLowerCase()
 
 2. For each syntax additional item listed above, explain what it does in your own words and then link a resource where you figured out what it does in the references section. 
-
-    * (example) The `final` keyword when used on a class prevents the class from being subclassed. This means that the class cannot be extended by another class. This is useful when you want to prevent a class from being modified or extended[^1] . It is often the standard to do this when a class only contains static methods such as driver or utility classes. Math in Java is an example of a final class[^2] .
+   * tells the Scanner to read input from the keyboard
+   * creates an unmodifiable copy of the original list
+   * reads the entire line of input from the user as a String
 
 3. What does `main` do in Java? 
-
-    Go ahead and answer the question as a short paragraph / few sentences. Notice the indent, this is valid because it is a list item. (erase this line before writing.)
+    Java will search for the main() method first and execute the code inside the method.  
+    
 
 
 4. What does `toString()` do in Java? Why should any object class you create have a `toString()` method?
 
-    Same as above - short answer
+    It is a string representation of an object. Before overriding it, it will return memory address of the object. By overrding the default, we can dispaly more useful information related to the object.
 
 5. What is javadoc style commenting? What is it used for? 
 
-    Same as above - short answer
+    It is a type of comment in Java that starts with `/**` and ends with `*/`. Java can automatically prduce html version of this comment documentation.
 
 
 6. Describe Test Driving Development (TDD) in your own words. 
-
-    Same as above - short answer    
+   Write the test before writing the method and detailing the code.
+   
 
 7. Go to the [Markdown Playground](MarkdownPlayground.md) and add at least 3 different markdown elements you learned about by reading the markdown resources listed in the document. Additionally you need to add a mermaid class diagram (of your choice does not have to follow the assignment. However, if you did use mermaid for the assignment, you can just copy that there). Add the elements into the markdown file, so that the formatting changes are reserved to that file. 
 
