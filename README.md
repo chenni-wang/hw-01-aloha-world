@@ -1,13 +1,13 @@
-Name:
+Name: Chenni Wang
 
-Github Account name:
+Github Account name: chenni-wang
 
-Link to Assignment on Github: (copy and paste the link to your assignment repo here)
+Link to Assignment on Github: https://github.com/chenni-wang/hw-01-aloha-world
 
-How many hours did it take you to complete this assignment (estimate)?
+How many hours did it take you to complete this assignment (estimate)? 
 
 Did you collaborate with any other students/TAs/Professors? If so, tell us who and in what
-capacity.
+capacity. 
 
 * one per row, add more if needed
   
