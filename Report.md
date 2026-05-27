@@ -28,6 +28,7 @@ The program starts with AlohaWorld.java. The main() calls consoleView, asking us
    * reads the entire line of input from the user as a String
 
 3. What does `main` do in Java? 
+   
     Java will search for the main() method first and execute the code inside the method.  
     
 
