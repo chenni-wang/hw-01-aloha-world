@@ -1,32 +1,35 @@
 package student;
 
 /**
- * This class is a place holder which you will fully implement based on the javadoc
- * <p>
- * https://cs5004-khoury-lionelle.github.io/hello_world/student/package-summary.html
- *
- */
-
-/**
- * This Greeting class stores the locality ID, locality name, and a string format of the greeting both ascii and unicode.
+ * This Greeting class stores the locality ID, locality name,
+ * and a string format of the greeting both ascii and unicode.
  */
 public class Greeting {
     /**
      * localityID: int value of locality
-     * localityName: name of locality
-     * asciiGreeting: ascii characters for the greeting
-     * unicodeGreeting: unicode characters for the greeting
-     * formatStr:the greeting
      */
     private int localityID;
+    /**
+     * localityName: name of locality
+     */
     private String localityName;
+    /**
+     * asciiGreeting: ascii characters for the greeting
+     */
     private String asciiGreeting;
+    /**
+     * unicodeGreeting: unicode characters for the greeting
+     */
     private String unicodeGreeting;
+    /**
+     * formatStr:the greeting
+     */
     private String formatStr;
 
     /**
      * This is the constructor for the greeting class. Default greeting that creates "Hello, {name}!".
-     * @param localityID int value of locality
+     *
+     * @param localityID   int value of locality
      * @param localityName name of locality
      */
     public Greeting(int localityID, String localityName) {
@@ -39,10 +42,12 @@ public class Greeting {
 
     /**
      * This is the constructor for the greeting class.
-     * Greeting that creates a greeting with ascii and unicode characters assuming the language is already using ascii letters only.
-     * @param localityID int value of locality
+     * Greeting that creates a greeting with ascii, and unicode characters
+     * assuming the language is already using ascii letters only.
+     *
+     * @param localityID   int value of locality
      * @param localityName name of locality
-     * @param greeting ascii characters for the greeting
+     * @param greeting     ascii characters for the greeting
      */
     public Greeting(int localityID, String localityName, String greeting) {
         this.localityID = localityID;
@@ -55,13 +60,16 @@ public class Greeting {
     /**
      * This is the constructor for the greeting class.
      * Greeting that creates a greeting with ascii and unicode characters.
-     * @param localityID int value of locality
-     * @param localityName name of locality
-     * @param asciiGreeting ascii characters for the greeting
-     * @param formatStr the greeting
+     *
+     * @param localityID      int value of locality
+     * @param localityName    name of locality
+     * @param asciiGreeting   ascii characters for the greeting
+     * @param formatStr       the greeting
      * @param unicodeGreeting unicode characters for the greeting
      */
-    public Greeting(int localityID, String localityName, String asciiGreeting, String unicodeGreeting, String formatStr) {
+    public Greeting(int localityID, String localityName,
+                    String asciiGreeting, String unicodeGreeting,
+                    String formatStr) {
         this.localityID = localityID;
         this.localityName = localityName;
         this.asciiGreeting = asciiGreeting;
@@ -72,6 +80,7 @@ public class Greeting {
 
     /**
      * Returns the locality id number.
+     *
      * @return the locality id number.
      */
     public int getLocalityID() {
@@ -80,6 +89,7 @@ public class Greeting {
 
     /**
      * Returns the locality name.
+     *
      * @return the locality name.
      */
     public String getLocalityName() {
@@ -88,6 +98,7 @@ public class Greeting {
 
     /**
      * Returns the ascii greeting.
+     *
      * @return the ascii greeting.
      */
     public String getAsciiGreeting() {
@@ -96,6 +107,7 @@ public class Greeting {
 
     /**
      * Returns the unicode greeting.
+     *
      * @return the unicode greeting.
      */
     public String getUnicodeGreeting() {
@@ -104,6 +116,7 @@ public class Greeting {
 
     /**
      * Gets the unicode format string.
+     *
      * @return the unicode format string.
      */
     public String getFormatStr() {
@@ -112,6 +125,7 @@ public class Greeting {
 
     /**
      * Returns the format string with the greeting inserted into the format.
+     *
      * @param asciiOnly boolean value to decide use asciicode or unicode
      * @return the format string with the greeting inserted into the format
      */
@@ -124,7 +138,8 @@ public class Greeting {
     }
 
     /**
-     * Return the string representation of the object
+     * Return the string representation of the object.
+     *
      * @return the string representation of the object
      */
     @Override
