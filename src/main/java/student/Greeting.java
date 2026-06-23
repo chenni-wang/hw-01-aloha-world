@@ -6,23 +6,23 @@ package student;
  */
 public class Greeting {
     /**
-     * localityID: int value of locality
+     * localityID: int value of locality.
      */
     private int localityID;
     /**
-     * localityName: name of locality
+     * localityName: name of locality.
      */
     private String localityName;
     /**
-     * asciiGreeting: ascii characters for the greeting
+     * asciiGreeting: ascii characters for the greeting.
      */
     private String asciiGreeting;
     /**
-     * unicodeGreeting: unicode characters for the greeting
+     * unicodeGreeting: unicode characters for the greeting.
      */
     private String unicodeGreeting;
     /**
-     * formatStr:the greeting
+     * formatStr:the greeting.
      */
     private String formatStr;
 
