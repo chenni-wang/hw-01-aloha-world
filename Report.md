@@ -12,6 +12,7 @@ link an image in markdown. You may also use [mermaid] class diagrams if you pref
 
 ### Program Flow
 Write a short paragraph detailing the flow of the program in your own words. This is to help you understand / trace the code (and give you practice of something called a code walk that will be required in this course).
+
 The program starts with AlohaWorld.java. The main() calls consoleView, asking users to input their names and select the locality number. Then, the main() creates a new greeter object called greeter. Greeter invokes the greet method to return a greeting based on locality. This is further displayed in the console. After one greeting is finished, a while loop is created to ask the users whether they want to run the greeting program again.
 
 ## Assignment Questions
@@ -29,22 +30,21 @@ The program starts with AlohaWorld.java. The main() calls consoleView, asking us
 
 3. What does `main` do in Java? 
    
-    Java will search for the main() method first and execute the code inside the method.  
-    
-
+Java will search for the main() method first and execute the code inside the method.  
 
 4. What does `toString()` do in Java? Why should any object class you create have a `toString()` method?
 
-    It is a string representation of an object. Before overriding it, it will return memory address of the object. By overrding the default, we can dispaly more useful information related to the object.
+It is a string representation of an object. Before overriding it, it will return memory address of the object. By overrding the default, we can dispaly more useful information related to the object.
 
 5. What is javadoc style commenting? What is it used for? 
 
-    It is a type of comment in Java that starts with `/**` and ends with `*/`. Java can automatically prduce html version of this comment documentation.
+It is a type of comment in Java that starts with `/**` and ends with `*/`. Java can automatically prduce html version of this comment documentation.
 
 
 6. Describe Test Driving Development (TDD) in your own words. 
    Write the test before writing the method and detailing the code.
    
+TDD means writing the test before writing the implementation of the methods. Knowing the return type and the return variable, we can use assertequals to write a simple test. 
 
 7. Go to the [Markdown Playground](MarkdownPlayground.md) and add at least 3 different markdown elements you learned about by reading the markdown resources listed in the document. Additionally you need to add a mermaid class diagram (of your choice does not have to follow the assignment. However, if you did use mermaid for the assignment, you can just copy that there). Add the elements into the markdown file, so that the formatting changes are reserved to that file. 
 
@@ -56,9 +56,11 @@ These questions require deeper thinking of the topic. We don't expect 100% corre
 
 1. Why would we want to keep interaction with the client contained to ConsoleView?
 
+We should separate the responsibility of each class. Greeter is in charge of generating greeting string, ConsoleView is incharge of user interaction and Aloha is the main program that orchestrates everything. This makes the code easier to manage and do the Junit test.
 
 2. Right now, the application isn't very dynamic in that it can be difficult to add new languages and greetings without modifying the code every time. Just thinking programmatically,  how could you make the application more dynamic? You are free to reference Geeting.java and how that could be used in your design.
 
+Instead of using switch statment to look up for the greeting string, we should store a list of greeting object directly. We then lookup the greeting inside the list based on the locality ID. In this way , we do not need to add the code to the switch statement every time a new language is added.
 
 
 > [!IMPORTANT]

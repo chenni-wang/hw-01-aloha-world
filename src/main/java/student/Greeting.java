@@ -2,9 +2,9 @@ package student;
 
 /**
  * This class is a place holder which you will fully implement based on the javadoc
- * 
+ * <p>
  * https://cs5004-khoury-lionelle.github.io/hello_world/student/package-summary.html
- * 
+ *
  */
 
 /**
@@ -29,12 +29,12 @@ public class Greeting {
      * @param localityID int value of locality
      * @param localityName name of locality
      */
-    public Greeting(int localityID, String localityName){
+    public Greeting(int localityID, String localityName) {
         this.localityID = localityID;
         this.localityName = localityName;
-        this.asciiGreeting="Hello";
-        this.unicodeGreeting="Hello";
-        this.formatStr="%s, %%s!";
+        this.asciiGreeting = "Hello";
+        this.unicodeGreeting = "Hello";
+        this.formatStr = "%s, %%s!";
     }
 
     /**
@@ -44,12 +44,12 @@ public class Greeting {
      * @param localityName name of locality
      * @param greeting ascii characters for the greeting
      */
-    public Greeting(int localityID, String localityName, String greeting){
-        this.localityID=localityID;
-        this.localityName=localityName;
-        this.asciiGreeting=greeting;
-        this.unicodeGreeting=greeting;
-        this.formatStr="%s, %%s!";
+    public Greeting(int localityID, String localityName, String greeting) {
+        this.localityID = localityID;
+        this.localityName = localityName;
+        this.asciiGreeting = greeting;
+        this.unicodeGreeting = greeting;
+        this.formatStr = "%s, %%s!";
     }
 
     /**
@@ -61,12 +61,12 @@ public class Greeting {
      * @param formatStr the greeting
      * @param unicodeGreeting unicode characters for the greeting
      */
-    public Greeting(int localityID, String localityName, String asciiGreeting, String unicodeGreeting, String formatStr){
-        this.localityID=localityID;
-        this.localityName=localityName;
-        this.asciiGreeting=asciiGreeting;
-        this.unicodeGreeting=unicodeGreeting;
-        this.formatStr=formatStr;
+    public Greeting(int localityID, String localityName, String asciiGreeting, String unicodeGreeting, String formatStr) {
+        this.localityID = localityID;
+        this.localityName = localityName;
+        this.asciiGreeting = asciiGreeting;
+        this.unicodeGreeting = unicodeGreeting;
+        this.formatStr = formatStr;
     }
 
 
@@ -74,7 +74,7 @@ public class Greeting {
      * Returns the locality id number.
      * @return the locality id number.
      */
-    public int getLocalityID(){
+    public int getLocalityID() {
         return this.localityID;
     }
 
@@ -82,7 +82,7 @@ public class Greeting {
      * Returns the locality name.
      * @return the locality name.
      */
-    public String getLocalityName(){
+    public String getLocalityName() {
         return this.localityName;
     }
 
@@ -90,7 +90,7 @@ public class Greeting {
      * Returns the ascii greeting.
      * @return the ascii greeting.
      */
-    public String getAsciiGreeting(){
+    public String getAsciiGreeting() {
         return this.asciiGreeting;
     }
 
@@ -98,7 +98,7 @@ public class Greeting {
      * Returns the unicode greeting.
      * @return the unicode greeting.
      */
-    public String getUnicodeGreeting(){
+    public String getUnicodeGreeting() {
         return this.unicodeGreeting;
     }
 
@@ -106,7 +106,7 @@ public class Greeting {
      * Gets the unicode format string.
      * @return the unicode format string.
      */
-    public String getFormatStr(){
+    public String getFormatStr() {
         return String.format(this.formatStr, this.unicodeGreeting);
     }
 
@@ -115,9 +115,9 @@ public class Greeting {
      * @param asciiOnly boolean value to decide use asciicode or unicode
      * @return the format string with the greeting inserted into the format
      */
-    public String getFormatStr(boolean asciiOnly){
-        if (asciiOnly){
-            return String.format(this.formatStr,this.asciiGreeting);
+    public String getFormatStr(boolean asciiOnly) {
+        if (asciiOnly) {
+            return String.format(this.formatStr, this.asciiGreeting);
         }
 
         return String.format(this.formatStr, this.unicodeGreeting);
@@ -128,10 +128,10 @@ public class Greeting {
      * @return the string representation of the object
      */
     @Override
-    public String toString(){
+    public String toString() {
         String str;
-        str= String.format("{localityID:%s, localityName:\"%s\", asciiGreeting:\"%s\", unicodeGreeting:\"%s\"}",
-                this.localityID,this.localityName,this.asciiGreeting,this.unicodeGreeting);
+        str = String.format("{localityID:%s, localityName:\"%s\", asciiGreeting:\"%s\", unicodeGreeting:\"%s\"}",
+                this.localityID, this.localityName, this.asciiGreeting, this.unicodeGreeting);
         return str;
     }
 
